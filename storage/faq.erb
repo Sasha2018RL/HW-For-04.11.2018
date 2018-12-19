@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      FAQ question page
+    </title>
+  </head>
+  <body>
+    <% if faq.nil? %>
+      <h1>Your question was not found!</h1>
+    <% else %>
+      <h1><%= faq[:title] %></h1>
+      <p>
+        <%= faq[:text] %>
+      </p>
+    <% end %>
+    <a href="/faq">return to faqs list</a>
+  </body>
+</html>

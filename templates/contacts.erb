@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>
+      Contacts
+    </title>
+  </head>
+  <body>
+    <h1>Contacts list</h1>
+    <p>
+      This is blog contacts list:
+    </p>
+
+    <% if contacts.nil? # posts.count == 0 %>
+      <h2>There are no contacts</h2>
+    <% else %>
+
+    <ul>
+      <% contacts.each do |contact| %>
+        <li>
+          <h3><%= contact[:name] %></h3>
+          <a href="mailto:<%= contact[:email] %>"><%= contact[:email] %></div>
+        </li>
+      <% end
+      end %>
+    </ul>
+
+    <a href="/create/contacts">Add contact</a>
+  </body>
+</html>
